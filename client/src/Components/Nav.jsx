@@ -4,7 +4,7 @@ import { MenuIcon }  from 'lucide-react'
 
 const Nav = () => {
     const [open,setOpen] = useState(false)
-    const [currentUser] = useState({name:"farax"})
+    const [currentUser,setCurrentUser] = useState({name:"farax"})
     const navigate = useNavigate()
   return (
     <div>
@@ -50,7 +50,7 @@ const Nav = () => {
             </div>
             {
                 currentUser  ? 
-            <div className='bg-red-600 px-2 py-1 text-white'>
+            <div onClick={()=>setCurrentUser(null)} className='bg-red-600 px-2 py-1 text-white'>
                 Logout
             </div>:
             <div className='bg-blue-600 px-2 py-1 text-white'>
