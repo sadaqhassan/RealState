@@ -42,11 +42,11 @@ const Nav = () => {
         </div>
         {
             open &&
-            <div className='md:hidden flex flex-col space-y-4 bg-gray-300 py-1'>
+            <div  className='md:hidden flex flex-col space-y-4 bg-gray-300 py-1'>
                 <div className='flex flex-col space-y-2 px-2 py-2'>
-                <Link to={'/'}> Home</Link>
-                <Link to={'/'}> About</Link>
-                <Link to={'/'}> Contact</Link>
+                <Link onClick={()=>setOpen(false)} to={'/'}> Home</Link>
+                <Link onClick={()=>setOpen(false)} to={'/about'}> About</Link>
+                <Link  onClick={()=>setOpen(false)} to={'/contact'}> Contact</Link>
             </div>
             {
                 currentUser  ? 
